@@ -42,7 +42,7 @@ body {
 }
 
 .cuadradito:hover {
-    background-color: #39ff14; /* Verde neón (Electric Lime) */
+    background-color: #d2ff00; /* Verde neón (Electric Lime) */
     
     /* Esta transición en 0s hace que se ENCIENDA al instante */
     transition: background-color 0s; 
@@ -83,7 +83,7 @@ body {
 }
 
 .highlight {
-    color: #39ff14; /* CORRECCIÓN: Mismo verde neón de la grilla */
+    color: #d2ff00; /* CORRECCIÓN: Mismo verde neón de la grilla */
 }
 
 .hero p {
@@ -95,7 +95,7 @@ body {
 .btn-primary {
     display: inline-block;
     padding: 15px 35px;
-    background-color: #39ff14; /* CORRECCIÓN: Verde neón */
+    background-color: #d2ff00; /* CORRECCIÓN: Verde neón */
     color: #050505; /* Letra bien oscura para que se lea perfecto sobre el verde */
     text-decoration: none;
     font-weight: bold;
