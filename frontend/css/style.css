@@ -1,5 +1,7 @@
-/* Reseteo básico */
-* {
+/* =========================================
+   RESETEO BÁSICO Y FONDOS
+   ========================================= */
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -7,19 +9,71 @@
 }
 
 body {
-    background-color: #0f172a; /* Azul muy oscuro, casi negro */
-    color: #f8fafc;
-    overflow-x: hidden;
+    margin: 0;
+    background-color: #050505; /* Negro casi puro */
+    color: white;
+    font-family: sans-serif;
 }
 
-/* --- HERO SECTION --- */
+/* =========================================
+   EFECTO DE GRILLA INTERACTIVA (JS + CSS)
+   ========================================= */
+/* El contenedor del fondo interactivo */
+#fondo-grilla {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 1; /* <- EL CAMBIO ESTÁ ACÁ: Lo pasamos de -1 a 1 */
+    background-color: #050505; /* Pasamos el color negro directamente a la grilla */
+    overflow: hidden;
+}
+
+.cuadradito {
+    /* Un borde super sutil para que se vea apenas la cuadrícula (opcional) */
+    border: 1px solid rgba(255, 255, 255, 0.02); 
+    box-sizing: border-box;
+    
+    /* Esta transición hace que el color se APAGUE lentamente (efecto estela) */
+    transition: background-color 1.5s ease; 
+}
+
+.cuadradito:hover {
+    background-color: #39ff14; /* Verde neón (Electric Lime) */
+    
+    /* Esta transición en 0s hace que se ENCIENDA al instante */
+    transition: background-color 0s; 
+}
+
+/* =========================================
+   CONTENEDOR PRINCIPAL Y BOTONES
+   ========================================= */
+.contenido-principal {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    /* Deja que el mouse "atraviese" el texto para tocar el fondo */
+    pointer-events: none; 
+}
+
+/* CORRECCIÓN: Vuelve a habilitar los clics en los botones y enlaces */
+.btn-primary, a {
+    pointer-events: auto;
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
 .hero {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    background: transparent; /* CORRECCIÓN: Eliminado el degradado para que se vea la grilla */
     padding: 0 20px;
 }
 
@@ -29,7 +83,7 @@ body {
 }
 
 .highlight {
-    color: #38bdf8; /* Celeste vibrante para destacar */
+    color: #39ff14; /* CORRECCIÓN: Mismo verde neón de la grilla */
 }
 
 .hero p {
@@ -41,8 +95,8 @@ body {
 .btn-primary {
     display: inline-block;
     padding: 15px 35px;
-    background-color: #38bdf8;
-    color: #0f172a;
+    background-color: #39ff14; /* CORRECCIÓN: Verde neón */
+    color: #050505; /* Letra bien oscura para que se lea perfecto sobre el verde */
     text-decoration: none;
     font-weight: bold;
     border-radius: 50px;
@@ -51,10 +105,37 @@ body {
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(56, 189, 248, 0.4);
+    box-shadow: 0 10px 20px rgba(57, 255, 20, 0.4); /* CORRECCIÓN: Sombra en tono verde */
 }
 
-/* --- ANIMACIONES DE ENTRADA (La magia) --- */
+/* =========================================
+   SECCIÓN DE SERVICIOS
+   ========================================= */
+.services {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.service-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 40px;
+    border-radius: 15px;
+    width: 300px;
+    border: 1px solid #334155;
+    /* Importante para que el hover sobre la tarjeta no se bloquee por el pointer-events: none del main */
+    pointer-events: auto; 
+}
+
+/* =========================================
+   ANIMACIONES (KEYFRAMES Y SCROLL)
+   ========================================= */
 .animate-on-load {
     opacity: 0;
     transform: translateY(30px);
@@ -71,12 +152,6 @@ body {
     }
 }
 
-/* --- EFECTOS AL SCROLLEAR --- */
-.services {
-    padding: 100px 20px;
-    text-align: center;
-}
-
 .animate-on-scroll {
     opacity: 0;
     transform: translateY(50px);
@@ -86,19 +161,4 @@ body {
 .animate-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
-}
-
-.service-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 40px;
-}
-
-.card {
-    background: #1e293b;
-    padding: 40px;
-    border-radius: 15px;
-    width: 300px;
-    border: 1px solid #334155;
 }
