@@ -3,36 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agencia Web | Potenciamos tu Negocio</title>
+    <meta name="description" content="TangoX - Agencia de desarrollo web y automatización para PyMEs. Conectamos negocios con tecnología de punta.">
+    <title>TangoX | Desarrollo Web y Automatización</title>
+    <!-- Use Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     
-    <div id="fondo-grilla"></div>
+    <!-- Canvas Interactive Background -->
+    <canvas id="fondo-grilla"></canvas>
+
+    <nav class="glass-nav">
+        <div class="nav-brand">TangoX</div>
+        <ul class="nav-links">
+            <li><a href="#procesos">Procesos</a></li>
+            <li><a href="#soluciones">Soluciones</a></li>
+            <li><a href="#conexion">Conexión</a></li>
+        </ul>
+    </nav>
 
     <main class="contenido-principal">
         
-        <section class="hero">
-            <div class="hero-content">
-                <h1 class="animate-on-load">Llevamos tu <span class="highlight">PyME</span> al siguiente nivel</h1>
-                <p class="animate-on-load delay-1">Diseños modernos, rápidos y pensados para que vendas más.</p>
-                <a href="#contacto" class="btn-primary animate-on-load delay-2">Empezar ahora</a>
-            </div>
-        </section>
-
-        <section class="services">
-            <div class="container">
-                <h2 class="animate-on-scroll">¿Qué hacemos?</h2>
-                <div class="service-grid">
-                    <div class="card animate-on-scroll">Landing Pages de alto impacto</div>
-                    <div class="card animate-on-scroll">E-commerce autogestionables</div>
-                    <div class="card animate-on-scroll">Sistemas a medida</div>
+        <section class="hero" id="hero">
+            <div class="hero-split">
+                <div class="hero-left">
+                    <h1 class="animate-on-load">Redefiniendo el <span class="highlight">futuro</span> de tu PyME</h1>
+                    <p class="animate-on-load delay-1">En TangoX no solo hacemos webs. Conectamos tu negocio con tecnología de punta y automatización inteligente.</p>
+                    <a href="#conexion" class="btn-primary animate-on-load delay-2">Iniciar Conexión</a>
+                </div>
+                <div class="hero-right animate-on-load delay-2">
+                    <div class="node-container" id="node-container">
+                        <!-- SVG for an intelligent node -->
+                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="node-svg">
+                            <circle cx="100" cy="100" r="40" class="core-node" />
+                            <circle cx="50" cy="50" r="15" class="orbit-node node-1" />
+                            <circle cx="150" cy="50" r="15" class="orbit-node node-2" />
+                            <circle cx="50" cy="150" r="15" class="orbit-node node-3" />
+                            <circle cx="150" cy="150" r="15" class="orbit-node node-4" />
+                            <line x1="60" y1="60" x2="85" y2="85" class="node-link" />
+                            <line x1="140" y1="60" x2="115" y2="85" class="node-link" />
+                            <line x1="60" y1="140" x2="85" y2="115" class="node-link" />
+                            <line x1="140" y1="140" x2="115" y2="115" class="node-link" />
+                        </svg>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- Sección 1: El Método TangoX -->
+        <section id="procesos" class="section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">El Método TangoX</h2>
+                <div class="timeline">
+                    <div class="timeline-item animate-on-scroll fade-up">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>1. Relevamiento</h3>
+                            <p>Analizamos el núcleo de tu negocio para descubrir oportunidades de optimización y digitalización.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll fade-up delay-1">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>2. Ingeniería</h3>
+                            <p>Diseñamos y desarrollamos soluciones a medida con arquitectura moderna y robusta.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-on-scroll fade-up delay-2">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>3. Escalabilidad</h3>
+                            <p>Implementamos sistemas preparados para crecer de forma exponencial junto con tus ventas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 2: Soluciones Modulares -->
+        <section id="soluciones" class="section">
+            <div class="container">
+                <h2 class="section-title animate-on-scroll">Soluciones Modulares</h2>
+                <p class="section-subtitle animate-on-scroll">Cada sistema es único. Estas son nuestras especialidades.</p>
+                <div class="asymmetric-grid">
+                    <div class="grid-card grid-large animate-on-scroll zoom-in">
+                        <div class="card-glass">
+                            <h3>Plataformas E-commerce</h3>
+                            <p>Tiendas online ultra rápidas y de alta conversión preparadas para escalar a múltiples divisas.</p>
+                        </div>
+                    </div>
+                    <div class="grid-card grid-tall animate-on-scroll zoom-in delay-1">
+                        <div class="card-glass">
+                            <h3>Automatización de Procesos</h3>
+                            <p>Sistemas que operan por ti 24/7 de forma eficiente, integrando workflows de negocios para ahorrar horas de trabajo.</p>
+                        </div>
+                    </div>
+                    <div class="grid-card grid-wide animate-on-scroll zoom-in">
+                        <div class="card-glass">
+                            <h3>Aplicaciones Web a Medida</h3>
+                            <p>Interfaces fluidas como aplicaciones nativas. Resolvemos problemas complejos con código eficiente y bien diseñado.</p>
+                        </div>
+                    </div>
+                    <div class="grid-card animate-on-scroll zoom-in delay-1">
+                        <div class="card-glass">
+                            <h3>Landing Pages</h3>
+                            <p>Páginas de alto impacto enfocadas únicamente en generar leads calificados y ventas directas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 3: El Nodo de Contacto -->
+        <section id="conexion" class="section connection-section">
+            <div class="container">
+                <div class="contact-node animate-on-scroll fade-up">
+                    <h2 class="section-title" style="margin-bottom: 10px;">El Nodo de Contacto</h2>
+                    <p>Iniciemos la conexión para impulsar tu crecimiento tecnológico.</p>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder=" " required>
+                            <label for="name">Nombre</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder=" " required>
+                            <label for="email">Correo Electrónico</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder=" " required></textarea>
+                            <label for="message">Mensaje de los Sistemas</label>
+                            <div class="input-line"></div>
+                        </div>
+                        <button type="submit" class="btn-primary form-btn">Transmitir Datos</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2026 TangoX. Conectando negocios con tecnología de punta.</p>
+        </footer>
     </main>
-    <script src="./js/fondo.js"></script> </body>
+
+    <script src="./js/fondo.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
