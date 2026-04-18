@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="TangoX - Agencia de desarrollo web y automatización para PyMEs. Conectamos negocios con tecnología de punta.">
+    <meta name="description"
+        content="TangoX - Agencia de desarrollo web y automatización para PyMEs. Conectamos negocios con tecnología de punta.">
     <title>TangoX | Desarrollo Web y Automatización</title>
     <!-- Use Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="./assets/favicon1.png">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@700&family=Outfit:wght@400;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+
     <!-- Canvas Interactive Background -->
     <canvas id="fondo-grilla"></canvas>
 
+    <div class="top-bar">
+        Tango<span class="highlight-x">X</span>
+    </div>
+
     <nav class="glass-nav">
-        <div class="nav-brand">TangoX</div>
+        <img src="./assets/logo.png" alt="TangoX Logo" class="nav-brand-logo">
         <ul class="nav-links">
             <li><a href="#procesos">Procesos</a></li>
             <li><a href="#soluciones">Soluciones</a></li>
@@ -26,28 +36,76 @@
     </nav>
 
     <main class="contenido-principal">
-        
+
         <section class="hero" id="hero">
             <div class="hero-split">
                 <div class="hero-left">
                     <h1 class="animate-on-load">Redefiniendo el <span class="highlight">futuro</span> de tu PyME</h1>
-                    <p class="animate-on-load delay-1">En TangoX no solo hacemos webs. Conectamos tu negocio con tecnología de punta y automatización inteligente.</p>
+                    <p class="animate-on-load delay-1">En TangoX no solo hacemos webs. Conectamos tu negocio con
+                        tecnología de punta y automatización inteligente.</p>
                     <a href="#conexion" class="btn-primary animate-on-load delay-2">Iniciar Conexión</a>
                 </div>
                 <div class="hero-right animate-on-load delay-2">
-                    <div class="node-container" id="node-container">
-                        <!-- SVG for an intelligent node -->
-                        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="node-svg">
-                            <circle cx="100" cy="100" r="40" class="core-node" />
-                            <circle cx="50" cy="50" r="15" class="orbit-node node-1" />
-                            <circle cx="150" cy="50" r="15" class="orbit-node node-2" />
-                            <circle cx="50" cy="150" r="15" class="orbit-node node-3" />
-                            <circle cx="150" cy="150" r="15" class="orbit-node node-4" />
-                            <line x1="60" y1="60" x2="85" y2="85" class="node-link" />
-                            <line x1="140" y1="60" x2="115" y2="85" class="node-link" />
-                            <line x1="60" y1="140" x2="85" y2="115" class="node-link" />
-                            <line x1="140" y1="140" x2="115" y2="115" class="node-link" />
-                        </svg>
+                    <div class="interactive-grid">
+                        <!-- Sector 1: Green Servers -->
+                        <div class="sector sector-1">
+                            <div class="off-state server-rack">
+                                <div class="server">
+                                    <div class="server-light"></div>
+                                    <div class="server-line"></div>
+                                </div>
+                                <div class="server">
+                                    <div class="server-light delay-a"></div>
+                                    <div class="server-line"></div>
+                                </div>
+                                <div class="server">
+                                    <div class="server-light delay-b"></div>
+                                    <div class="server-line"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sector 2: Violet Setup -->
+                        <div class="sector sector-2">
+                            <div class="off-state setup-desk">
+                                <div class="monitor">
+                                    <div class="screen">
+                                        <div class="screen-glow"></div>
+                                        <div class="code-line w-long"></div>
+                                        <div class="code-line w-short"></div>
+                                        <div class="code-line w-med"></div>
+                                    </div>
+                                    <div class="stand"></div>
+                                    <div class="base"></div>
+                                </div>
+                                <div class="mate">
+                                    <div class="mate-bombilla"></div>
+                                    <div class="mate-cup"></div>
+                                    <div class="mate-smoke s1"></div>
+                                    <div class="mate-smoke s2"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sector 3: Yellow Network Nodes -->
+                        <div class="sector sector-3">
+                            <div class="off-state network-nodes">
+                                <div class="net-line l1"><div class="data-pulse"></div></div>
+                                <div class="net-line l2"><div class="data-pulse delay-a"></div></div>
+                                <div class="net-node n1"></div>
+                                <div class="net-node n2"></div>
+                                <div class="net-node n3"></div>
+                            </div>
+                        </div>
+
+                        <!-- Sector 4: Orange Database Stack -->
+                        <div class="sector sector-4">
+                            <div class="off-state db-stack">
+                                <div class="db-layer layer-1"><div class="db-light"></div></div>
+                                <div class="db-layer layer-2"><div class="db-light"></div></div>
+                                <div class="db-layer layer-3"><div class="db-light"></div></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -62,7 +120,8 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <h3>1. Relevamiento</h3>
-                            <p>Analizamos el núcleo de tu negocio para descubrir oportunidades de optimización y digitalización.</p>
+                            <p>Analizamos el núcleo de tu negocio para descubrir oportunidades de optimización y
+                                digitalización.</p>
                         </div>
                     </div>
                     <div class="timeline-item animate-on-scroll fade-up delay-1">
@@ -76,7 +135,8 @@
                         <div class="timeline-dot"></div>
                         <div class="timeline-content">
                             <h3>3. Escalabilidad</h3>
-                            <p>Implementamos sistemas preparados para crecer de forma exponencial junto con tus ventas.</p>
+                            <p>Implementamos sistemas preparados para crecer de forma exponencial junto con tus ventas.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -87,30 +147,35 @@
         <section id="soluciones" class="section">
             <div class="container">
                 <h2 class="section-title animate-on-scroll">Soluciones Modulares</h2>
-                <p class="section-subtitle animate-on-scroll">Cada sistema es único. Estas son nuestras especialidades.</p>
+                <p class="section-subtitle animate-on-scroll">Cada sistema es único. Estas son nuestras especialidades.
+                </p>
                 <div class="asymmetric-grid">
                     <div class="grid-card grid-large animate-on-scroll zoom-in">
                         <div class="card-glass">
                             <h3>Plataformas E-commerce</h3>
-                            <p>Tiendas online ultra rápidas y de alta conversión preparadas para escalar a múltiples divisas.</p>
+                            <p>Tiendas online ultra rápidas y de alta conversión preparadas para escalar a múltiples
+                                divisas.</p>
                         </div>
                     </div>
                     <div class="grid-card grid-tall animate-on-scroll zoom-in delay-1">
                         <div class="card-glass">
                             <h3>Automatización de Procesos</h3>
-                            <p>Sistemas que operan por ti 24/7 de forma eficiente, integrando workflows de negocios para ahorrar horas de trabajo.</p>
+                            <p>Sistemas que operan por ti 24/7 de forma eficiente, integrando workflows de negocios para
+                                ahorrar horas de trabajo.</p>
                         </div>
                     </div>
                     <div class="grid-card grid-wide animate-on-scroll zoom-in">
                         <div class="card-glass">
                             <h3>Aplicaciones Web a Medida</h3>
-                            <p>Interfaces fluidas como aplicaciones nativas. Resolvemos problemas complejos con código eficiente y bien diseñado.</p>
+                            <p>Interfaces fluidas como aplicaciones nativas. Resolvemos problemas complejos con código
+                                eficiente y bien diseñado.</p>
                         </div>
                     </div>
                     <div class="grid-card animate-on-scroll zoom-in delay-1">
                         <div class="card-glass">
                             <h3>Landing Pages</h3>
-                            <p>Páginas de alto impacto enfocadas únicamente en generar leads calificados y ventas directas.</p>
+                            <p>Páginas de alto impacto enfocadas únicamente en generar leads calificados y ventas
+                                directas.</p>
                         </div>
                     </div>
                 </div>
@@ -153,4 +218,5 @@
     <script src="./js/fondo.js"></script>
     <script src="./js/main.js"></script>
 </body>
+
 </html>
